@@ -3,85 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="es-CO"/>
-    <title>Login-FesaHockey</title>
-    <link rel="stylesheet" href="styleslog.css">
+    <title>Fesa Hockey</title>
+    <link rel="stylesheet" type="text/css" href="/MenuDashboard/css/stylesdashboard.css"/>
+  </head>
 
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
+              <span class="title">Brand Name</span>
+            </a>
+          </li>
 
-    <!--PWA-->
-<link rel="manifest" href="./PaginaUsuario/manifest.json"> 
-<!---PWA--->
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
 
-<!----METAS DE PWA-->
-<meta name="theme-color" content="#2F3BA2">
-<meta name="MobileOptimized" content="width">
-<meta name="HandheldFriendly" content="true">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="shortcut icon" type="image/png" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-512x512.png">
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-512x512.png">
-<link rel="apple-touch-startup-image" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-512x512.png">
+          <li>
+            <a href="ReaderPlayer.html">
+              <span class="icon"
+                ><ion-icon name="person-outline"></ion-icon
+              ></span>
+              <span class="title">Lista de Jugadores</span>
+            </a>
 
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-72x72.png" />
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-96x96.png" />
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-128x128.png" />
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-144x144.png" />
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-152x152.png" />
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-192x192.png" />
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-384x384.png" />
-<link rel="apple-touch-icon" href="./PaginaUsuario/pwa/images/icons/logohockeyicon-512x512.png" />
-</head>
-<body>
+            
+          </li>
 
-     <!--extencion para pwa-->
-     <script src="./PaginaUsuario/regist_serviceWorker.js"></script> 
-     <script>
-       $(function(){
-     //Precarga de la pagina se ejecuta solo una vez
-     setTimeout(
-         ()=>{
-             $(".cargando").hide(); 
-          } , 50
-      );
-      });
- 
-      if ('serviceWorker' in navigator) {
-         navigator.serviceWorker.register('./PaginaUsuario/regist_serviceWorker.js')
-             .then(function(reg) {
-                 console.log('Service worker registrado.');
-             })
-             .catch(function(err) {
-                 console.error('Error al registrar el service worker:', err);
-             });
-     }
-     </script>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="chatbubbles-outline"></ion-icon
+              ></span>
+              <span class="title">Message</span>
+            </a>
+          </li>
 
-    <div class="box">
-        <span class="borderLine"></span>
-        <form id="loginForm">
-            <h2>Login</h2>
-            <div class="inputBox">
-                <input type="text" id="email" name="email" required="required">
-                <span for="email">Email</span>
-                <i></i>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="title">Help</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span class="title">Setting</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="lock-closed-outline"></ion-icon
+              ></span>
+              <span class="title">Password</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="log-out-outline"></ion-icon
+              ></span>
+              <span class="title">Sign Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- main -->
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <!-- search -->
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+          <!-- userImg -->
+          <div class="user">
+            <img src="/MenuDashboard/imgDashboard/user.jpg" />
+          </div>
+        </div>
+
+        <!-- cards -->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers">1,504</div>
+              <div class="cardName">Participantes</div>
             </div>
-            <div class="inputBox">
-                <input type="password" id="password" name="password" required="required">
-                <span for="password">Password</span>
-                <i></i>
+            <div class="iconBx">
+              <ion-icon name="football-outline"></ion-icon>
             </div>
-            <div class="links">
-                <a href="#">Forgot Password</a>
-                <a href="#">Signup</a>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">1,504</div>
+              <div class="cardName">Equipos</div>
             </div>
-            <input type="submit"  value="Login">
-            <a href="MenuDashboard/html/Dashboard.html">login2</a>
-        </form>
+            <div class="iconBx">
+              <ion-icon name="id-card-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">1,504</div>
+              <div class="cardName">Delegaciones</div>
+            </div>
+            <div class="iconBx">
+              <ion-icon name="game-controller-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">1,504</div>
+              <div class="cardName">estadios</div>
+            </div>
+            <div class="iconBx">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <!--detalles de la lista minuto38:55-->
+      </div>
     </div>
-    <!-- Template Javascript -->
-    <script src="logearme.js"></script>
-</body>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      //MenuToogle
+      let toggle = document.querySelector(".toggle");
+      let navigation = document.querySelector(".navigation");
+      let main = document.querySelector(".main");
+
+      toggle.onclick = function () {
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+      };
+      //agregar el hovered en la clase de selecioonar el listado de item
+      let list = document.querySelectorAll(".navigation li");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("hovered"));
+        this.classList.add("hovered");
+      }
+      list.forEach((item) => item.addEventListener("mouseover", activeLink));
+    </script>
+  </body>
 </html>
